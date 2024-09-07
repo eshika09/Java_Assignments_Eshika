@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class assignment16 {
+    public static int hcf(int a, int b){
+        if(b>a)return hcf(b, a);
+        if(b==0)return a;
+        return hcf(b, a%b);
+    }
+    public static void main(String []args){
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Enter a: ");
+    int a=sc.nextInt();
+    System.out.println("Enter b: ");
+    int b=sc.nextInt();
+    System.out.println("HCF of both the number is: " +hcf(a, b));
+    }
+}
